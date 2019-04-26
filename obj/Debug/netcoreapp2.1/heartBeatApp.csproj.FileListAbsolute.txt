@@ -1,0 +1,11 @@
+C:\Users\pamatya\Desktop\dot\heartBeatApp\bin\Debug\netcoreapp2.1\heartBeatApp.deps.json
+C:\Users\pamatya\Desktop\dot\heartBeatApp\bin\Debug\netcoreapp2.1\heartBeatApp.runtimeconfig.json
+C:\Users\pamatya\Desktop\dot\heartBeatApp\bin\Debug\netcoreapp2.1\heartBeatApp.runtimeconfig.dev.json
+c:\Users\pamatya\Desktop\dot\heartBeatApp\bin\Debug\netcoreapp2.1\heartBeatApp.dll
+c:\Users\pamatya\Desktop\dot\heartBeatApp\bin\Debug\netcoreapp2.1\heartBeatApp.pdb
+c:\Users\pamatya\Desktop\dot\heartBeatApp\obj\Debug\netcoreapp2.1\heartBeatApp.csprojAssemblyReference.cache
+c:\Users\pamatya\Desktop\dot\heartBeatApp\obj\Debug\netcoreapp2.1\heartBeatApp.csproj.CoreCompileInputs.cache
+c:\Users\pamatya\Desktop\dot\heartBeatApp\obj\Debug\netcoreapp2.1\heartBeatApp.AssemblyInfoInputs.cache
+c:\Users\pamatya\Desktop\dot\heartBeatApp\obj\Debug\netcoreapp2.1\heartBeatApp.AssemblyInfo.cs
+c:\Users\pamatya\Desktop\dot\heartBeatApp\obj\Debug\netcoreapp2.1\heartBeatApp.dll
+c:\Users\pamatya\Desktop\dot\heartBeatApp\obj\Debug\netcoreapp2.1\heartBeatApp.pdb
