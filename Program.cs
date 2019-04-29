@@ -25,12 +25,9 @@ namespace heartBeatApp
 
         static async Task<programCheck> GetProductAsync(string path){
             programCheck prog1 = null; 
-            //programCheck prog2 = null;
             HttpResponseMessage response = await client.GetAsync(path);
             if(response.IsSuccessStatusCode){
             prog1 = await response.Content.ReadAsAsync<programCheck>();
-            //prog1 = JsonConvert.DeserializeAnonymousType<programCheck>(prog1);
-            //var objResponse1 =  JsonConvert.DeserializeObject<List<programCheck>>(prog1);
             }
             return prog1;
         }
@@ -48,7 +45,9 @@ namespace heartBeatApp
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+            //Please Don't add any code in the main function. Any Additional code needs to be 
+            // updated on the try on RunAsync function.
             RunAsync().GetAwaiter().GetResult();
         }
 
@@ -63,15 +62,17 @@ namespace heartBeatApp
 
                 //Get the product
                 prog2 = await GetProductAsync("http://localhost:5000/api/programcheck/1");
-                //var prog3 = JsonConvert.DeserializeObject<programCheck>(prog2);
+                
+                //Show the product
                 ShowProgramCheck(prog2);
+                //Only show programCount off the prog2
                 Console.WriteLine(prog2.programCount);
 
                 // Update the product
                 Console.WriteLine("Updating programCount...");
-                prog2.programCount = 4;
+                prog2.programCount = 7;
                 await UpdateProductAsync(prog2);
-               // Console.WriteLine(prog2);
+               
                ShowProgramCheck(prog2);
             }
             catch (Exception e){
