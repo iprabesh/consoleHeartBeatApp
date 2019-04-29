@@ -35,6 +35,17 @@ namespace heartBeatApp
             return prog1;
         }
 
+         static async Task<programCheck> UpdateProductAsync(programCheck product)
+        {
+            HttpResponseMessage response = await client.PutAsJsonAsync(
+                $"api/programcheck/{product.Id}", product);
+            response.EnsureSuccessStatusCode();
+
+            // Deserialize the updated product from the response body.
+            product = await response.Content.ReadAsAsync<programCheck>();
+            return product;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -55,7 +66,13 @@ namespace heartBeatApp
                 //var prog3 = JsonConvert.DeserializeObject<programCheck>(prog2);
                 ShowProgramCheck(prog2);
                 Console.WriteLine(prog2.programCount);
+
+                // Update the product
+                Console.WriteLine("Updating programCount...");
+                prog2.programCount = 4;
+                await UpdateProductAsync(prog2);
                // Console.WriteLine(prog2);
+               ShowProgramCheck(prog2);
             }
             catch (Exception e){
                 Console.WriteLine(e.Message);
